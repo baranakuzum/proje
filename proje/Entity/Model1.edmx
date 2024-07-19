@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CRMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tblMesajlar">
+          <Key>
+            <PropertyRef Name="MesajID" />
+          </Key>
+          <Property Name="MesajID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GonderenID" Type="int" Nullable="false" />
+          <Property Name="AliciID" Type="int" Nullable="false" />
+          <Property Name="Icerik" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TblMusteri">
+          <Key>
+            <PropertyRef Name="musteriID" />
+          </Key>
+          <Property Name="musteriID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="musteriFirma" Type="nvarchar" MaxLength="20" />
+          <Property Name="musteriSifre" Type="nvarchar" MaxLength="20" />
+          <Property Name="musteriMail" Type="nvarchar" MaxLength="50" />
+          <Property Name="musteriTel" Type="nvarchar" MaxLength="20" />
+          <Property Name="musteriAddress" Type="nvarchar" MaxLength="30" />
+          <Property Name="ekstrayap" Type="nvarchar" MaxLength="50" />
+          <Property Name="DateOfBirth" Type="date" />
+          <Property Name="RegistrationDate" Type="datetime" />
+          <Property Name="yapilacak" Type="nvarchar(max)" />
+          <Property Name="MusteriNot" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="TblPersonel">
+          <Key>
+            <PropertyRef Name="personelID" />
+          </Key>
+          <Property Name="personelID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PersonelAd" Type="nvarchar" MaxLength="30" />
+          <Property Name="personelSoyad" Type="nvarchar" MaxLength="30" />
+          <Property Name="personelUnvan" Type="nvarchar" MaxLength="20" />
+          <Property Name="personelKullanici" Type="nvarchar" MaxLength="30" />
+          <Property Name="personelSifre" Type="nvarchar" MaxLength="10" />
+          <Property Name="PersonelNot" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityContainer Name="CRMModelStoreContainer">
+          <EntitySet Name="tblMesajlar" EntityType="Self.tblMesajlar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblMusteri" EntityType="Self.TblMusteri" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblPersonel" EntityType="Self.TblPersonel" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CRMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="CRMEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TblMusteri" EntityType="CRMModel.TblMusteri" />
+          <EntitySet Name="TblPersonel" EntityType="CRMModel.TblPersonel" />
+          <EntitySet Name="tblMesajlar" EntityType="CRMModel.tblMesajlar" />
+          </EntityContainer>
+        <EntityType Name="TblMusteri">
+          <Key>
+            <PropertyRef Name="musteriID" />
+          </Key>
+          <Property Name="musteriID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="musteriFirma" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="musteriSifre" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="musteriMail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="musteriTel" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="musteriAddress" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ekstrayap" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DateOfBirth" Type="DateTime" Precision="0" />
+          <Property Name="RegistrationDate" Type="DateTime" Precision="3" />
+          <Property Name="yapilacak" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MusteriNot" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TblPersonel">
+          <Key>
+            <PropertyRef Name="personelID" />
+          </Key>
+          <Property Name="personelID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PersonelAd" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="personelSoyad" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="personelUnvan" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="personelKullanici" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="personelSifre" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="PersonelNot" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          </EntityType>
+        <EntityType Name="tblMesajlar">
+          <Key>
+            <PropertyRef Name="MesajID" />
+          </Key>
+          <Property Name="MesajID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GonderenID" Type="Int32" Nullable="false" />
+          <Property Name="AliciID" Type="Int32" Nullable="false" />
+          <Property Name="Icerik" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CRMModelStoreContainer" CdmEntityContainer="CRMEntities1">
+          <EntitySetMapping Name="TblMusteri">
+            <EntityTypeMapping TypeName="CRMModel.TblMusteri">
+              <MappingFragment StoreEntitySet="TblMusteri">
+                <ScalarProperty Name="MusteriNot" ColumnName="MusteriNot" />
+                <ScalarProperty Name="yapilacak" ColumnName="yapilacak" />
+                <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="ekstrayap" ColumnName="ekstrayap" />
+                <ScalarProperty Name="musteriAddress" ColumnName="musteriAddress" />
+                <ScalarProperty Name="musteriTel" ColumnName="musteriTel" />
+                <ScalarProperty Name="musteriMail" ColumnName="musteriMail" />
+                <ScalarProperty Name="musteriSifre" ColumnName="musteriSifre" />
+                <ScalarProperty Name="musteriFirma" ColumnName="musteriFirma" />
+                <ScalarProperty Name="musteriID" ColumnName="musteriID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblPersonel">
+            <EntityTypeMapping TypeName="CRMModel.TblPersonel">
+              <MappingFragment StoreEntitySet="TblPersonel">
+                <ScalarProperty Name="PersonelNot" ColumnName="PersonelNot" />
+                <ScalarProperty Name="personelSifre" ColumnName="personelSifre" />
+                <ScalarProperty Name="personelKullanici" ColumnName="personelKullanici" />
+                <ScalarProperty Name="personelUnvan" ColumnName="personelUnvan" />
+                <ScalarProperty Name="personelSoyad" ColumnName="personelSoyad" />
+                <ScalarProperty Name="PersonelAd" ColumnName="PersonelAd" />
+                <ScalarProperty Name="personelID" ColumnName="personelID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblMesajlar">
+            <EntityTypeMapping TypeName="CRMModel.tblMesajlar">
+              <MappingFragment StoreEntitySet="tblMesajlar">
+                <ScalarProperty Name="Icerik" ColumnName="Icerik" />
+                <ScalarProperty Name="AliciID" ColumnName="AliciID" />
+                <ScalarProperty Name="GonderenID" ColumnName="GonderenID" />
+                <ScalarProperty Name="MesajID" ColumnName="MesajID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
