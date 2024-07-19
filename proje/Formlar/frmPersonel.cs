@@ -80,5 +80,12 @@ namespace proje.Formlar
             frm.Show();
             this.Hide();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            frmnot frm =new frmnot();   
+            frm.Show();
+            this.Hide();
+        }
     }
 }

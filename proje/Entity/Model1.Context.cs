@@ -28,5 +28,6 @@ namespace proje.Entity
         public virtual DbSet<TblMusteri> TblMusteri { get; set; }
         public virtual DbSet<TblPersonel> TblPersonel { get; set; }
         public virtual DbSet<tblMesajlar> tblMesajlar { get; set; }
+        public virtual DbSet<Notlar> Notlar { get; set; }
     }
 }

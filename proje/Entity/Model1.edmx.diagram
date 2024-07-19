@@ -8,6 +8,7 @@
         <EntityTypeShape EntityType="CRMModel.TblMusteri" Width="1.5" PointX="4.75" PointY="1.125" />
         <EntityTypeShape EntityType="CRMModel.TblPersonel" Width="1.5" PointX="0.75" PointY="1.125" />
         <EntityTypeShape EntityType="CRMModel.tblMesajlar" Width="1.5" PointX="2.875" PointY="1.5" />
+        <EntityTypeShape EntityType="CRMModel.Notlar" Width="1.5" PointX="6.625" PointY="1.25" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

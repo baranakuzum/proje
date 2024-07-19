@@ -75,6 +75,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Entity\Notlar.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entity\tblMesajlar.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

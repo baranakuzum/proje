@@ -24,6 +24,5 @@ namespace proje.Entity
         public Nullable<System.DateTime> DateOfBirth { get; set; }
         public Nullable<System.DateTime> RegistrationDate { get; set; }
         public string yapilacak { get; set; }
-        public string MusteriNot { get; set; }
     }
 }

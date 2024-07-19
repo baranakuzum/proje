@@ -32,12 +32,12 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.mesajform = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.TxtSearch = new System.Windows.Forms.TextBox();
             this.ara = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button4 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -85,6 +85,16 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(6, 338);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(123, 42);
+            this.button4.TabIndex = 6;
+            this.button4.Text = "Çikış";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // mesajform
             // 
             this.mesajform.Location = new System.Drawing.Point(6, 280);
@@ -103,6 +113,7 @@
             this.button5.TabIndex = 4;
             this.button5.Text = "Notlarım";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // TxtSearch
             // 
@@ -131,16 +142,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(580, 377);
             this.dataGridView1.TabIndex = 7;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(6, 338);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(123, 42);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Çikış";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // frmPersonel
             // 

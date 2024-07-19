@@ -5,6 +5,14 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="CRMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Notlar">
+          <Key>
+            <PropertyRef Name="NotID" />
+          </Key>
+          <Property Name="NotID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KullaniciID" Type="int" Nullable="false" />
+          <Property Name="Notlar" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
         <EntityType Name="tblMesajlar">
           <Key>
             <PropertyRef Name="MesajID" />
@@ -40,9 +48,9 @@
           <Property Name="personelUnvan" Type="nvarchar" MaxLength="20" />
           <Property Name="personelKullanici" Type="nvarchar" MaxLength="30" />
           <Property Name="personelSifre" Type="nvarchar" MaxLength="10" />
-          <Property Name="PersonelNot" Type="nvarchar(max)" />
         </EntityType>
         <EntityContainer Name="CRMModelStoreContainer">
+          <EntitySet Name="Notlar" EntityType="Self.Notlar" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblMesajlar" EntityType="Self.tblMesajlar" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblMusteri" EntityType="Self.TblMusteri" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblPersonel" EntityType="Self.TblPersonel" Schema="dbo" store:Type="Tables" />
@@ -55,6 +63,7 @@
           <EntitySet Name="TblMusteri" EntityType="CRMModel.TblMusteri" />
           <EntitySet Name="TblPersonel" EntityType="CRMModel.TblPersonel" />
           <EntitySet Name="tblMesajlar" EntityType="CRMModel.tblMesajlar" />
+          <EntitySet Name="Notlar" EntityType="CRMModel.Notlar" />
           </EntityContainer>
         <EntityType Name="TblMusteri">
           <Key>
@@ -70,7 +79,6 @@
           <Property Name="DateOfBirth" Type="DateTime" Precision="0" />
           <Property Name="RegistrationDate" Type="DateTime" Precision="3" />
           <Property Name="yapilacak" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="MusteriNot" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="TblPersonel">
           <Key>
@@ -82,7 +90,6 @@
           <Property Name="personelUnvan" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="personelKullanici" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="personelSifre" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="PersonelNot" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           </EntityType>
         <EntityType Name="tblMesajlar">
           <Key>
@@ -93,6 +100,14 @@
           <Property Name="AliciID" Type="Int32" Nullable="false" />
           <Property Name="Icerik" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityType Name="Notlar">
+          <Key>
+            <PropertyRef Name="NotID" />
+          </Key>
+          <Property Name="NotID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KullaniciID" Type="Int32" Nullable="false" />
+          <Property Name="Notlar1" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -102,7 +117,6 @@
           <EntitySetMapping Name="TblMusteri">
             <EntityTypeMapping TypeName="CRMModel.TblMusteri">
               <MappingFragment StoreEntitySet="TblMusteri">
-                <ScalarProperty Name="MusteriNot" ColumnName="MusteriNot" />
                 <ScalarProperty Name="yapilacak" ColumnName="yapilacak" />
                 <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
                 <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
@@ -119,7 +133,6 @@
           <EntitySetMapping Name="TblPersonel">
             <EntityTypeMapping TypeName="CRMModel.TblPersonel">
               <MappingFragment StoreEntitySet="TblPersonel">
-                <ScalarProperty Name="PersonelNot" ColumnName="PersonelNot" />
                 <ScalarProperty Name="personelSifre" ColumnName="personelSifre" />
                 <ScalarProperty Name="personelKullanici" ColumnName="personelKullanici" />
                 <ScalarProperty Name="personelUnvan" ColumnName="personelUnvan" />
@@ -136,6 +149,15 @@
                 <ScalarProperty Name="AliciID" ColumnName="AliciID" />
                 <ScalarProperty Name="GonderenID" ColumnName="GonderenID" />
                 <ScalarProperty Name="MesajID" ColumnName="MesajID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Notlar">
+            <EntityTypeMapping TypeName="CRMModel.Notlar">
+              <MappingFragment StoreEntitySet="Notlar">
+                <ScalarProperty Name="Notlar1" ColumnName="Notlar" />
+                <ScalarProperty Name="KullaniciID" ColumnName="KullaniciID" />
+                <ScalarProperty Name="NotID" ColumnName="NotID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

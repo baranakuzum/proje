@@ -12,13 +12,10 @@ namespace proje.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class TblPersonel
+    public partial class Notlar
     {
-        public int personelID { get; set; }
-        public string PersonelAd { get; set; }
-        public string personelSoyad { get; set; }
-        public string personelUnvan { get; set; }
-        public string personelKullanici { get; set; }
-        public string personelSifre { get; set; }
+        public int NotID { get; set; }
+        public int KullaniciID { get; set; }
+        public string Notlar1 { get; set; }
     }
 }
