@@ -74,6 +74,7 @@
             this.TxtSifre.Name = "TxtSifre";
             this.TxtSifre.Size = new System.Drawing.Size(251, 22);
             this.TxtSifre.TabIndex = 2;
+            this.TxtSifre.UseSystemPasswordChar = true;
             // 
             // TxtKullanici
             // 

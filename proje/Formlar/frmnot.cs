@@ -211,6 +211,11 @@ namespace proje.Formlar
             // Kullanıcıya başarı mesajı göster
             MessageBox.Show("Yeni not başarıyla eklendi.");
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Base.geri(this);
+        }
     }
 }
 

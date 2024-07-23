@@ -117,7 +117,7 @@
             // 
             // TxtSearch
             // 
-            this.TxtSearch.Location = new System.Drawing.Point(601, 18);
+            this.TxtSearch.Location = new System.Drawing.Point(1035, 12);
             this.TxtSearch.Name = "TxtSearch";
             this.TxtSearch.Size = new System.Drawing.Size(111, 22);
             this.TxtSearch.TabIndex = 5;
@@ -125,7 +125,7 @@
             // 
             // ara
             // 
-            this.ara.Location = new System.Drawing.Point(718, 12);
+            this.ara.Location = new System.Drawing.Point(1152, 6);
             this.ara.Name = "ara";
             this.ara.Size = new System.Drawing.Size(49, 34);
             this.ara.TabIndex = 6;
@@ -140,20 +140,20 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(580, 377);
+            this.dataGridView1.Size = new System.Drawing.Size(1013, 377);
             this.dataGridView1.TabIndex = 7;
             // 
             // frmPersonel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1212, 511);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.ara);
             this.Controls.Add(this.TxtSearch);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmPersonel";
-            this.Text = "frmPersonel";
+            this.Text = "MegaCode Yazılım";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

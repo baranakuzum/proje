@@ -34,6 +34,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.Not_Guncelle = new System.Windows.Forms.Button();
             this.sil_btn = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBox1
@@ -51,7 +52,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(129, 46);
             this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
+            this.button1.Text = "Gönder";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -91,11 +92,23 @@
             this.sil_btn.UseVisualStyleBackColor = true;
             this.sil_btn.Click += new System.EventHandler(this.sil_btn_Click);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button2.Image = global::proje.Properties.Resources.geri;
+            this.button2.Location = new System.Drawing.Point(12, 14);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(57, 54);
+            this.button2.TabIndex = 24;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // frmnot
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.sil_btn);
             this.Controls.Add(this.Not_Guncelle);
             this.Controls.Add(this.comboBox1);
@@ -117,5 +130,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button Not_Guncelle;
         private System.Windows.Forms.Button sil_btn;
+        private System.Windows.Forms.Button button2;
     }
 }

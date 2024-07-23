@@ -13,6 +13,16 @@
           <Property Name="KullaniciID" Type="int" Nullable="false" />
           <Property Name="Notlar" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
         <EntityType Name="tblMesajlar">
           <Key>
             <PropertyRef Name="MesajID" />
@@ -36,7 +46,6 @@
           <Property Name="DateOfBirth" Type="date" />
           <Property Name="RegistrationDate" Type="datetime" />
           <Property Name="yapilacak" Type="nvarchar(max)" />
-          <Property Name="MusteriNot" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="TblPersonel">
           <Key>
@@ -51,6 +60,7 @@
         </EntityType>
         <EntityContainer Name="CRMModelStoreContainer">
           <EntitySet Name="Notlar" EntityType="Self.Notlar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblMesajlar" EntityType="Self.tblMesajlar" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblMusteri" EntityType="Self.TblMusteri" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblPersonel" EntityType="Self.TblPersonel" Schema="dbo" store:Type="Tables" />
@@ -64,6 +74,7 @@
           <EntitySet Name="TblPersonel" EntityType="CRMModel.TblPersonel" />
           <EntitySet Name="tblMesajlar" EntityType="CRMModel.tblMesajlar" />
           <EntitySet Name="Notlar" EntityType="CRMModel.Notlar" />
+          <EntitySet Name="sysdiagrams" EntityType="CRMModel.sysdiagrams" />
           </EntityContainer>
         <EntityType Name="TblMusteri">
           <Key>
@@ -107,6 +118,16 @@
           <Property Name="NotID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="KullaniciID" Type="Int32" Nullable="false" />
           <Property Name="Notlar1" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -158,6 +179,17 @@
                 <ScalarProperty Name="Notlar1" ColumnName="Notlar" />
                 <ScalarProperty Name="KullaniciID" ColumnName="KullaniciID" />
                 <ScalarProperty Name="NotID" ColumnName="NotID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="CRMModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
