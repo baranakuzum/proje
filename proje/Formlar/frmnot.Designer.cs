@@ -48,7 +48,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(280, 291);
+            this.button1.Location = new System.Drawing.Point(355, 279);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(129, 46);
             this.button1.TabIndex = 1;
@@ -58,23 +58,23 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(280, 232);
+            this.textBox1.Location = new System.Drawing.Point(195, 232);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.Size = new System.Drawing.Size(497, 22);
             this.textBox1.TabIndex = 2;
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(68, 140);
+            this.comboBox1.Location = new System.Drawing.Point(12, 98);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.Size = new System.Drawing.Size(177, 24);
             this.comboBox1.TabIndex = 4;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Not_Guncelle
             // 
-            this.Not_Guncelle.Location = new System.Drawing.Point(280, 343);
+            this.Not_Guncelle.Location = new System.Drawing.Point(355, 331);
             this.Not_Guncelle.Name = "Not_Guncelle";
             this.Not_Guncelle.Size = new System.Drawing.Size(129, 39);
             this.Not_Guncelle.TabIndex = 5;
@@ -84,7 +84,7 @@
             // 
             // sil_btn
             // 
-            this.sil_btn.Location = new System.Drawing.Point(280, 388);
+            this.sil_btn.Location = new System.Drawing.Point(355, 376);
             this.sil_btn.Name = "sil_btn";
             this.sil_btn.Size = new System.Drawing.Size(129, 39);
             this.sil_btn.TabIndex = 6;
